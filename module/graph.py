@@ -1,4 +1,4 @@
-
+d
 # 授業用にグラフの出力をまとめたModule
 
 import pandas               as pd
@@ -91,7 +91,7 @@ def plotCSV2Hist(data_path="",title="Hist", data_type=0):
     values = df[label]
     print(values)
     if data_type == 0 : #カテゴリカルデータ
-        values.value_counts().plot(kind="bar", width=1)
+        values.value_counts(sort=False).plot(kind="bar", width=1)
     else:
         plt.hist(values, bins=sturgesNumber(len(values)))
 

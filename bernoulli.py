@@ -10,7 +10,7 @@ process = []
 
 for i in range(num):
     # ベルヌーイ分布に従う結果を返します
-    result = scipy.stats.bernoulli.rvs(0.6)
+    result = scipy.stats.bernoulli.rvs(0.525)
     # 表が出た回数と,裏が出た回数を記録します.
     if result == 0:
         front += 1
