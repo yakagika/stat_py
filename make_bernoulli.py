@@ -8,7 +8,7 @@ num_of_experiment = int(input("何回コインを投げるかを入力して下�
 
 num_of_trial      = int(input("何回ベルヌーイ実験を繰り返すかを入力して下さい. \n"))
 
-# ベルヌーイ試行を1000回行った結果
+# ベルヌーイ試行をn回行った結果
 # 表が出た回数のリストを返す
 def bernoulli_trial(num_of_experiment, num_of_trial):
     front = 0
@@ -61,7 +61,7 @@ plt.xlabel("Number of fornt side appears")
 plt.ylabel("Number of experiment")
 plt.show()
 
-# 実験結果の表示
+# 確率分布の表示
 l = len(xs)
 y_values  = [(y / l) for y in list(df)]
 plt.bar(x_values,y_values)
