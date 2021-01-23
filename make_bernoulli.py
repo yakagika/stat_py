@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 import matplotlib.pyplot    as plt
 import pandas               as pd
 import random
@@ -16,7 +18,7 @@ def bernoulli_trial(num_of_experiment, num_of_trial):
     for i in range(num_of_trial):
         for j in range(num_of_experiment):
             x = random.random()
-            if x < 0.5:
+            if x <= 0.5:
                 front += 1
         res.append(front)
         front = 0
@@ -45,11 +47,6 @@ def v(n,p):
 print("確率分布の標準偏差 np(1-p):", v(num_of_experiment,0.5)**(1/2))
 print("実測値の標準偏差 1/n sum (x - bar x) ^2:", variance(xs)**(1/2))
 
-# 関数名を sturgesNumber として引数をnとします
-def sturgesNumber(n):
-    # 公式の通り k = 1 + log2 n
-    # 階級数は整数が良いので,math.floor()で小数点以下を切り捨てます
-    return (math.floor (1 + math.log2(n)))
 
 # 実験結果の表示
 df = pd.DataFrame([[x] for x in xs]).value_counts(sort=False)

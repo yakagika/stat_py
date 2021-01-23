@@ -1,4 +1,3 @@
-d
 # 授業用にグラフの出力をまとめたModule
 
 import pandas               as pd

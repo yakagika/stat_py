@@ -38,7 +38,7 @@ pd.plotting.scatter_matrix(df.drop(['year'],axis=1), figsize=(15,15), range_padd
 plt.show()
 
 # 多重共線性
-# 相関のあるようそはあまり利用しないほうが良い
+# 相関のある要素はあまり利用しないほうが良い
 sns.heatmap(df.drop(['year'], axis = 1).corr())
 plt.show()
 
